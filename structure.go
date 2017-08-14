@@ -1,4 +1,5 @@
 // structure
+// method (function based on data type)
 
 package main
 
@@ -9,6 +10,14 @@ type user struct {
   score int
 }
 
+func (u user) show() {
+  fmt.Printf("name:%s, score:%d\n", u.name, u.score)
+}
+
+func (u user) hit() {
+  u.score++
+}
+
 func main() {
   // u := new(user)
   // (*u).name = "sasaki"
@@ -16,5 +25,6 @@ func main() {
   // u.score = 20
 
   u := user{name:"sasaki", score:20}
+  u.show()
   fmt.Println(u)
 }
