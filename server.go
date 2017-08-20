@@ -1,4 +1,4 @@
-// pakcage
+// package
 
 package main
 
